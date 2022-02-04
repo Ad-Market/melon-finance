@@ -10,7 +10,7 @@ export default function Home() {
         <img className="hero-img" src="/hero-landing.svg" alt="hero" />
 
         <div className="body">
-          <h1>We're Launcing Soon!</h1>
+          <h1>We&apos;re Launcing Soon!</h1>
           <P lg>
             Feugiat eu neque bibendum tellus. Vitae at vitae, vel leo dignissim
             eget ipsum id. Dictumst diam aliquet tortor ipsum id amet semper
