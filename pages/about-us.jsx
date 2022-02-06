@@ -70,7 +70,7 @@ export default function AboutUs() {
                 const { head, body } = el;
 
                 return (
-                  <div className="d-flex item">
+                  <div className="d-flex item" key={"pillar" + idx}>
                     <div className="num text-yellow">0{idx + 1}</div>
                     <div className="main">
                       <h3>{head}</h3>
