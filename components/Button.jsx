@@ -1,14 +1,27 @@
 import React from "react";
 import clsx from "clsx";
 
-const Button = ({ primary, title, lg, noShadow, children, ...rest }) => {
+const Button = ({
+  primary,
+  secondary,
+  transparent,
+  title,
+  lg,
+  xlg,
+  noShadow,
+  children,
+  ...rest
+}) => {
   return (
     <button
       className={clsx(
         "btn",
         { "btn-primary": primary },
+        { "btn-secondary": secondary },
+        { transparent },
         { "no-shadow": noShadow },
-        { lg }
+        { lg },
+        { xlg }
       )}
       {...rest}
     >
