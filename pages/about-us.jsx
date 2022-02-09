@@ -1,11 +1,7 @@
-import Link from "next/link";
-
 import MainLayout from "../layouts/MainLayout";
 import Section from "../components/Section";
 import P from "../components/Paragraph";
-import Button from "../components/Button";
 import GridContainer from "../components/GridContainer";
-import SocialLinks from "../components/SocialLinks";
 
 export default function AboutUs() {
   return (
@@ -132,6 +128,21 @@ export default function AboutUs() {
             </p>
           </div>
         </GridContainer>
+      </Section>
+
+      <Section className="lg">
+        <div className="mission">
+          <div className="main text-center">
+            <h2 className="text-yellow text-center mb-3">Join our mission</h2>
+            <p className="lh-2">
+              Join us on our mission to bring greater choice, independence, and
+              opportunity to individuals around the world.
+            </p>
+            <a className="fs-18 text-underline mt-4 pt-3 pb-3 d-block" href="#">
+              Visit Career Page
+            </a>
+          </div>
+        </div>
       </Section>
     </MainLayout>
   );

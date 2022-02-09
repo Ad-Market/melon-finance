@@ -142,6 +142,41 @@
 }
 
 #products {
+  .hero {
+    display: flex;
+    background-color: $color8;
+    border-radius: 16px;
+    border: 0.5px solid $color8;
+
+    .text {
+      margin: 60px;
+      width: 555px;
+      flex-shrink: 0;
+    }
+
+    .img {
+      flex-grow: 1;
+      flex-shrink: 1;
+      background-image: url(/products-hero-vector.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-x: 90%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .partners {
+    margin-top: 60px;
+
+    .row > * {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   .head {
     max-width: 458px;
     margin-left: auto;
@@ -157,19 +192,38 @@
 
   .main {
     .product {
-      margin-top: 130px;
+      margin-top: 65px;
 
-      .btn {
-        margin-top: 30px;
+      .product-img {
+        width: 100%;
+
+        .placeholder {
+          max-width: 390px;
+        }
       }
 
-      &:nth-child(even) {
-        .row {
-          flex-direction: row-reverse;
+      .product-text {
+        ul {
+          margin: 30px 0 100px;
 
-          .col-7 {
+          li {
             display: flex;
-            justify-content: flex-end;
+            align-items: flex-start;
+          }
+        }
+
+        .btn {
+          margin-top: 30px;
+        }
+
+        &:nth-child(even) {
+          .row {
+            flex-direction: row-reverse;
+
+            .col-7 {
+              display: flex;
+              justify-content: flex-end;
+            }
           }
         }
       }

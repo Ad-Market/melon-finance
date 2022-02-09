@@ -10,7 +10,7 @@ const Navbar = () => {
           <img src="/logo.svg" />
         </Link>
         <div className="nav">
-          <Link href="#">Products</Link>
+          <Link href="/products">Products</Link>
           <Link href="/about-us">About Us</Link>
           <Link href="#">FAQ</Link>
           <Link href="#">Blog</Link>
