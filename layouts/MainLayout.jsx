@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import clsx from "clsx";
 
 import Navbar from "../components/Navbar";
@@ -7,6 +6,7 @@ import Section from "../components/Section";
 import Button from "../components/Button";
 import GridContainer from "../components/GridContainer";
 import SocialLinks from "../components/SocialLinks";
+import NavLink from "../components/NavLink";
 
 const MainLayout = ({
   id,
@@ -102,45 +102,47 @@ const MainLayout = ({
                         <h6>Company</h6>
 
                         <div className="links-main">
-                          <Link href="#">About</Link>
-                          <Link href="#">Career</Link>
-                          <Link href="#">Product</Link>
-                          <Link href="#">FAQ</Link>
-                          <Link href="#">Blog</Link>
+                          <NavLink href="#">About</NavLink>
+                          <NavLink href="#">Career</NavLink>
+                          <NavLink href="#">Product</NavLink>
+                          <NavLink href="#">FAQ</NavLink>
+                          <NavLink href="#">Blog</NavLink>
                         </div>
                       </div>
                       <div className="links">
                         <h6>Retail</h6>
 
                         <div className="links-main">
-                          <Link href="#">Crypto Custody</Link>
-                          <Link href="#">Credit Cards</Link>
-                          <Link href="#">Gift Cards</Link>
-                          <Link href="#">Seed Investment</Link>
-                          <Link href="#">Partners</Link>
+                          <NavLink href="#">Crypto Custody</NavLink>
+                          <NavLink href="#">Credit Cards</NavLink>
+                          <NavLink href="#">Gift Cards</NavLink>
+                          <NavLink href="#">Seed Investment</NavLink>
+                          <NavLink href="#">Partners</NavLink>
                         </div>
                       </div>
                       <div className="links">
                         <h6>Enterprise</h6>
 
                         <div className="links-main">
-                          <Link href="#">Term Based Transaction Service</Link>
-                          <Link href="#">Commercial Credit</Link>
-                          <Link href="#">Powering Loyalthy</Link>
-                          <Link href="#">Digital Asset Payments</Link>
-                          <Link href="#">Crypto Rewards</Link>
+                          <NavLink href="#">
+                            Term Based Transaction Service
+                          </NavLink>
+                          <NavLink href="#">Commercial Credit</NavLink>
+                          <NavLink href="#">Powering Loyalthy</NavLink>
+                          <NavLink href="#">Digital Asset Payments</NavLink>
+                          <NavLink href="#">Crypto Rewards</NavLink>
                         </div>
                       </div>
                       <div className="links">
                         <h6>Legal</h6>
 
                         <div className="links-main">
-                          <Link href="#">Terms of Use</Link>
-                          <Link href="#">Privacy Policy</Link>
-                          <Link href="#">Licenses &amp; Disclosures</Link>
-                          <Link href="#">Cookie Policy</Link>
-                          <Link href="#">Cardholder Agreement</Link>
-                          <Link href="#">E-Sign Consent</Link>
+                          <NavLink href="/legal">Terms of Use</NavLink>
+                          <NavLink href="#">Privacy Policy</NavLink>
+                          <NavLink href="#">Licenses &amp; Disclosures</NavLink>
+                          <NavLink href="#">Cookie Policy</NavLink>
+                          <NavLink href="#">Cardholder Agreement</NavLink>
+                          <NavLink href="#">E-Sign Consent</NavLink>
                         </div>
                       </div>
                       <div className="copyright d-md-none d-block mt-3 text-center mx-auto">

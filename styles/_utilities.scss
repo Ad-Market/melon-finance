@@ -562,7 +562,8 @@ a {
     a {
       color: $color3;
 
-      &:hover {
+      &:hover,
+      &.active {
         font-weight: 600;
         color: #fff;
       }
@@ -825,7 +826,8 @@ a {
             display: block;
             padding: 5px 0;
 
-            &:hover {
+            &:hover,
+            &.active {
               font-weight: 600;
             }
           }

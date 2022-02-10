@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import clsx from "clsx";
 import $ from "jquery";
-import Link from "next/link";
+
+import NavLink from "../components/NavLink";
 import Button from "../components/Button";
 import GridContainer from "./GridContainer";
 
 const Navbar = ({ buttonTitle }) => {
-  // const [navbarActiveState, setNavbarActiveState] = useState(false);
   const navRef = useRef(null);
 
   const toggleNav = () => {
@@ -18,17 +18,17 @@ const Navbar = ({ buttonTitle }) => {
       <GridContainer>
         <div className="col">
           <div className="page-container">
-            <Link href="/">
+            <NavLink href="/">
               <img className="logo" src="/logo.svg" />
-            </Link>
+            </NavLink>
             <button onClick={toggleNav} className="btn d-lg-none d-block">
               <img src="/hamburger.svg" alt="hamburger" />
             </button>
             <div ref={navRef} className={clsx("nav")}>
-              <Link href="/products">Products</Link>
-              <Link href="/about-us">About Us</Link>
-              <Link href="#">FAQ</Link>
-              <Link href="#">Blog</Link>
+              <NavLink href="/products">Products</NavLink>
+              <NavLink href="/about-us">About Us</NavLink>
+              <NavLink href="#">FAQ</NavLink>
+              <NavLink href="#">Blog</NavLink>
               <Button primary>{buttonTitle || "Get Started"}</Button>
             </div>
           </div>
