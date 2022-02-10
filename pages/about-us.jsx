@@ -7,11 +7,11 @@ export default function AboutUs() {
   return (
     <MainLayout id="about-us">
       <Section className="mt-0">
-        <GridContainer>
-          <div className="col-6 d-flex align-items-center">
+        <GridContainer className="flex-md-row flex-column-reverse">
+          <div className="col-lg-6 col-md-7 d-flex align-items-center">
             <div className="text">
-              <h1>Melon Network</h1>
-              <P lg>
+              <h1 className="text-center text-lg-start">Melon Network</h1>
+              <P className="text-center text-lg-start" lg>
                 Feugiat eu neque bibendum tellus. Vitae at vitae, vel leo
                 dignissim eget ipsum id. Dictumst diam aliquet tortor ipsum id
                 amet semper faucibus leo. Condimentum hendrerit tellus est
@@ -21,8 +21,13 @@ export default function AboutUs() {
               </P>
             </div>
           </div>
-          <div className="col-6 d-flex justify-content-end">
-            <img src="/about-us-1.svg" alt="about-us-1" />
+          <div className="col-lg-6 col-md-5 d-flex justify-content-center justify-content-lg-end">
+            <img
+              className="w-100 mb-5 mb-lg-0"
+              style={{ maxWidth: "483px" }}
+              src="/about-us-1.svg"
+              alt="about-us-1"
+            />
           </div>
         </GridContainer>
       </Section>
@@ -41,10 +46,15 @@ export default function AboutUs() {
 
         <div className="pillars-main">
           <GridContainer>
-            <div className="col-6 d-flex align-items-center">
-              <img src="/about-us-2.svg" alt="about-us" />
+            <div className="col-lg-6 col-md-5 d-flex align-items-center justify-content-md-start justify-content-center">
+              <img
+                className="w-100 mb-4 mb-md-0"
+                style={{ maxWidth: "495px" }}
+                src="/about-us-2.svg"
+                alt="about-us"
+              />
             </div>
-            <div className="col-6">
+            <div className="col-lg-6 col-md-7">
               {[
                 {
                   head: "Product",
@@ -85,8 +95,8 @@ export default function AboutUs() {
           Nam nec urna vel cursus placerat laoreet
         </h2>
 
-        <GridContainer>
-          <div className="col-6 d-flex align-items-center">
+        <GridContainer className="flex-column-reverse flex-md-row">
+          <div className="col-lg-6 col-md-7 d-flex align-items-center">
             <p>
               Diam phasellus fermentum netus urna est placerat aliquet placerat.
               Est faucibus sit at nam tempus felis. Nibh diam nulla duis amet
@@ -105,8 +115,13 @@ export default function AboutUs() {
               dignissim sed ultrices faucibus felis.
             </p>
           </div>
-          <div className="col-6 d-flex justify-content-end">
-            <img src="/about-us-3.svg" alt="about-us-3" />
+          <div className="col-lg-6 col-md-5 d-flex justify-content-center justify-content-md-end">
+            <img
+              className="w-100 mb-4 mb-md-0"
+              style={{ maxWidth: "505px" }}
+              src="/about-us-3.svg"
+              alt="about-us-3"
+            />
           </div>
         </GridContainer>
       </Section>
@@ -115,10 +130,15 @@ export default function AboutUs() {
         <h2 className="text-center title">Faucibus dictum euismod in quis</h2>
 
         <GridContainer>
-          <div className="col-6">
-            <img src="/about-us-4.svg" alt="about-us-4" />
+          <div className="col-lg-6 col-md-5 d-flex justify-content-center justify-content-md-start">
+            <img
+              className="w-100 mb-4 mb-md-0"
+              style={{ maxWidth: "431px" }}
+              src="/about-us-4.svg"
+              alt="about-us-4"
+            />
           </div>
-          <div className="col-6 d-flex align-items-center">
+          <div className="col-lg-6 col-md-7 d-flex align-items-center">
             <p>
               Diam phasellus fermentum netus urna est placerat aliquet placerat.
               Est faucibus sit at nam tempus felis. Nibh diam nulla duis amet

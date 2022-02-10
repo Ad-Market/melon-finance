@@ -2,6 +2,7 @@ import React from "react";
 import clsx from "clsx";
 
 const Button = ({
+  className,
   primary,
   secondary,
   transparent,
@@ -21,7 +22,8 @@ const Button = ({
         { transparent },
         { "no-shadow": noShadow },
         { lg },
-        { xlg }
+        { xlg },
+        className
       )}
       {...rest}
     >

@@ -8,10 +8,18 @@ import Button from "../components/Button";
 import GridContainer from "../components/GridContainer";
 import SocialLinks from "../components/SocialLinks";
 
-const MainLayout = ({ id, noNav, noGrads, noFoot, children }) => {
+const MainLayout = ({
+  id,
+  buttonTitle,
+  noNav,
+  noGrads,
+  noFoot,
+  noBottomSections,
+  children,
+}) => {
   return (
     <>
-      {!noNav && <Navbar />}
+      {!noNav && <Navbar buttonTitle={buttonTitle} />}
       <main id={id} className={clsx({ "pt-5": noNav })}>
         {!noGrads && (
           <>
@@ -27,39 +35,50 @@ const MainLayout = ({ id, noNav, noGrads, noFoot, children }) => {
 
         {!noFoot && (
           <>
-            <Section className="lg">
-              <div className="get-started">
-                <div className="main text-center">
-                  <h2 className="text-center mb-3">
-                    The most trusted crypto-native finance platform
-                  </h2>
-                  <p className="lh-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Consectetur venenatis dapibus quam id. Urna sit.
-                  </p>
+            {!noBottomSections && (
+              <>
+                <Section className="lg">
+                  <div className="get-started">
+                    <div className="main text-center">
+                      <h2 className="text-center mb-3">
+                        The most trusted crypto-native finance platform
+                      </h2>
+                      <p className="lh-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Consectetur venenatis dapibus quam id. Urna sit.
+                      </p>
 
-                  <img src="/trusted-platform.svg" alt="trusted" />
+                      <img
+                        className="mx-auto d-block my-5 w-100"
+                        style={{ maxWidth: "336px" }}
+                        src="/product-1.svg"
+                        alt="trusted"
+                      />
 
-                  <div className="mt-4 pt-3">
-                    <Button xlg primary>
-                      Get Started
-                    </Button>
+                      <div className="mt-4 pt-3">
+                        <Button xlg primary>
+                          Get Started
+                        </Button>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </Section>
+                </Section>
 
-            <Section className="lg">
-              <div className="newsletter lg d-flex align-items-center">
-                <h4 className="me-4 pe-3 fw-medium fw-500">Stay up to date</h4>
-                <div className="flex-grow-1">
-                  <input type="email" placeholder="Enter your email" />
-                  <Button secondary noShadow>
-                    Subscribe
-                  </Button>
-                </div>
-              </div>
-            </Section>
+                <Section className="lg">
+                  <div className="newsletter lg d-flex flex-column flex-sm-row align-items-center">
+                    <h4 className="me-md-4 me-0 mb-4 mb-sm-0 pe-3 fw-medium fw-500">
+                      Stay up to date
+                    </h4>
+                    <div className="flex-grow-1 p-relative w-575-100">
+                      <input type="email" placeholder="Enter your email" />
+                      <Button secondary noShadow>
+                        Subscribe
+                      </Button>
+                    </div>
+                  </div>
+                </Section>
+              </>
+            )}
 
             <footer id="footer">
               <div className="page-container">
@@ -74,7 +93,7 @@ const MainLayout = ({ id, noNav, noGrads, noFoot, children }) => {
 
                       <SocialLinks className="justify-content-start" inverted />
 
-                      <div className="copyright">
+                      <div className="copyright d-md-block d-none">
                         © 2022 Melon Financials | All Rights Reserved
                       </div>
                     </div>
@@ -119,10 +138,13 @@ const MainLayout = ({ id, noNav, noGrads, noFoot, children }) => {
                           <Link href="#">Terms of Use</Link>
                           <Link href="#">Privacy Policy</Link>
                           <Link href="#">Licenses &amp; Disclosures</Link>
-                          <Link href="#">Licenses &amp; Disclosures</Link>
+                          <Link href="#">Cookie Policy</Link>
                           <Link href="#">Cardholder Agreement</Link>
                           <Link href="#">E-Sign Consent</Link>
                         </div>
+                      </div>
+                      <div className="copyright d-md-none d-block mt-3 text-center mx-auto">
+                        © 2022 Melon Financials | All Rights Reserved
                       </div>
                     </div>
                   </GridContainer>

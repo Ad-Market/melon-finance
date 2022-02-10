@@ -1,9 +1,9 @@
 import React from "react";
 import clsx from "clsx";
 
-const Paragraph = ({ lg, rest, children }) => {
+const Paragraph = ({ lg, className, rest, children }) => {
   return (
-    <p className={clsx({ lg })} {...rest}>
+    <p className={clsx({ lg }, className)} {...rest}>
       {children}
     </p>
   );
